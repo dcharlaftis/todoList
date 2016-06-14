@@ -1,6 +1,6 @@
 # todoList
 
-Simple application for a demo todo list. Configured to run locally.
+Simple application for a demo todo list. Server side developed in django rest framework and client side developed in AngularJS. Configured to run locally.
 
 ##Server configuration
 
