@@ -16,3 +16,10 @@ Simple application for a demo todo list. Configured to run locally.
 2. $cd todo
 3. $./manage.py runserver 9000
 
+4. Test api
+
+$curl http://localhost:9000/api/tasks/
+$curl -X POST http://localhost:9000/api/tasks/ -d "title=Task 1&description=Clean House"
+$curl -X PUT http://localhost:9000/api/tasks/1 -d "title=Task 1&description=Clean House Backyard"
+$curl -X PUT http://localhost:9000/api/tasks/1 -d "title=Task 1&description=Clean Anna's House Backyard &completed=True"
+$curl -X DELETE http://localhost:9000/api/tasks/1
