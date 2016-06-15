@@ -6,6 +6,7 @@
 
             $scope.tasks = [];
             $scope.showTable = false;
+            $scope.canEdit = false;
 
             $http({
                 method: 'GET',
@@ -19,21 +20,21 @@
                     $('#taskTable').DataTable();
                 });
 
-
             }, function errorCallback(error) {
                 console.log("error", error);
             });
 
             $scope.postData = {
-                    title: "",
-                    description: ""
-                };
+                title: "",
+                description: "",
+                completed: "True"
+            };
 
             $scope.addTask = function() {
                 console.log("adding..2");
                 //$location.path('/add');
                 //$state.go('lala.add');
-                
+
                 var transform = function() {
                     return $.param($scope.postData);
                 }
@@ -48,7 +49,58 @@
                     .error(function(error) {
                         console.log(error);
                     });
+            }
 
+            $scope.deleteTask = function(index) {
+                //console.log("dddddd", index);
+                var ind = index + 1;
+                var deleteUrl = 'http://localhost:9000/api/tasks/' + ind;
+                $http({
+                    method: 'DELETE',
+                    url: deleteUrl
+                }).then(function successCallback(response) {
+                    console.log("delete it", response);
+                    window.location.reload();
+
+                }, function errorCallback(error) {
+                    console.log("error", error);
+                });
+            }
+
+            $scope.saveData = {
+                title: "",
+                description: "",
+                completed: true
+            };
+             
+            $scope.pos = -1;
+             
+            $scope.editTask = function(index) {
+                $scope.canEdit = true;
+                $scope.saveData.title = $scope.tasks[index].title;
+                $scope.saveData.description = $scope.tasks[index].description;
+                $scope.pos = index;
+
+            }
+
+            $scope.saveTask = function() {
+
+                var transform = function() {
+                    return $.param($scope.saveData);
+                }
+
+                var putUrl = 'http://localhost:9000/api/tasks/' + $scope.pos;
+
+                $http.put(putUrl, $scope.saveData, {
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                        transformRequest: transform
+                    }).success(function(responseData) {
+                        console.log("okkk put", responseData);
+                        window.location.reload();
+                    })
+                    .error(function(error) {
+                        console.log(error);
+                    });             
             }
 
         }

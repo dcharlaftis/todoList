@@ -20,6 +20,27 @@
             </div>
         </div>
     </div>
+    <div ng-if ="canEdit" class="row">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div class="col-md-2">
+                    <p>
+                        <button type="button" class="btn btn-success" ng-click="saveTask()">Save</button>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input type="text" placeholder="Task Title" ng-model = "saveData.title" class="form-control" id="pwd">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input type="text" placeholder="Task Description" ng-model = "saveData.description" class="form-control" id="pwd">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <p></p>
     </div>
@@ -29,6 +50,7 @@
                 <tr>
                     <th>Title</th>
                     <th>Description</th>
+                    <th>Completed</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -37,6 +59,7 @@
                 <tr>
                     <th>Title</th>
                     <th>Description</th>
+                    <th>Completed</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -45,11 +68,12 @@
                 <tr ng-repeat="task in tasks">
                     <td>{{task.title}}</td>
                     <td>{{task.description}}</td>
+                    <td>{{task.completed}}</td>
                     <td>
-                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-warning" ng-click = "editTask($index)">Edit</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger" ng-click = "deleteTask($index)">Delete</button>
                     </td>
                 </tr>
             </tbody>
