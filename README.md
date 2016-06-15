@@ -42,3 +42,6 @@ Simple application for a demo todo list. Server side developed in django rest fr
 1. Serve client: $python -m SimpleHTTPServer
 
 2. Test Client: in a browser hit http://localhost:8000
+
+###NOTE!!
+To avoid CORS issues on browser you can install the Allow-origin plugin (for Chrome).
