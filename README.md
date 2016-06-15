@@ -24,3 +24,21 @@ Simple application for a demo todo list. Server side developed in django rest fr
 4. $curl -X PUT http://localhost:9000/api/tasks/1 -d "title=Task 1&description=Clean Anna's House Backyard &completed=True"
 5. $curl -X DELETE http://localhost:9000/api/tasks/1
 
+
+##Client configuration
+
+### [A] Install client libs
+
+1. Install npm
+2. Install bower (globally): $ npm install -g bower
+
+3. go to client folder
+  3a. $npm install
+  3b. $bower install
+
+
+### [B] Run client
+
+1. Serve client: $python -m SimpleHTTPServer
+
+2. Test Client: in a browser hit http://localhost:8000

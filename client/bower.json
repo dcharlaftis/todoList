@@ -1,0 +1,19 @@
+{
+  "name": "todo list",
+  "description": "Simple todo list project",
+  "version": "1.0",
+  "homepage": "https://github.com/dcharlaftis/todoList.git",
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-ui-router": "",
+    "jquery": "",
+    "bootstrap": "",
+    "angular-resource": "~1.4.6",
+    "angular-local-storage": "~0.2.2",
+    "angular-bootstrap": "~0.13.4",
+    "angular-route": "~1.4.6",
+    "lodash": "~3.10.1"    
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todo list",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcharlaftis/todoList.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "mizo",
+  "license": "",
+  "dependencies": {
+    "bower": "",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
