@@ -27,7 +27,7 @@
             $scope.postData = {
                 title: "",
                 description: "",
-                completed: "True"
+                //completed: true
             };
 
             $scope.addTask = function() {
@@ -69,8 +69,7 @@
 
             $scope.saveData = {
                 title: "",
-                description: "",
-                completed: true
+                description: ""                
             };
              
             $scope.pos = -1;
@@ -88,8 +87,8 @@
                 var transform = function() {
                     return $.param($scope.saveData);
                 }
-
-                var putUrl = 'http://localhost:9000/api/tasks/' + $scope.pos;
+                var indx = $scope.pos +1;
+                var putUrl = 'http://localhost:9000/api/tasks/' + indx;
 
                 $http.put(putUrl, $scope.saveData, {
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
