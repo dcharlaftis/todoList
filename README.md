@@ -6,7 +6,7 @@ Simple application for a demo todo list. Server side developed in django rest fr
 
 ### [A] Prerequisites (Ubuntu distros)
 
-1. $apt-get install pip
+1. $apt-get install python-pip
 2. $pip install django
 3. $pip install djangorestframework
 
