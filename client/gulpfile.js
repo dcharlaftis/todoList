@@ -17,6 +17,7 @@ var js_lib_files = [
   'bower_components/lodash/lodash.min.js',
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/bootstrap/dist/js/bootstrap.min.js',
+  'assets/bootstrap/js/datatables.min.js'
 ];
 
 var app_files = [
