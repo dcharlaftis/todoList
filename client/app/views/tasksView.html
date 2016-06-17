@@ -49,8 +49,7 @@
             <thead>
                 <tr>
                     <th>Title</th>
-                    <th>Description</th>
-                    <th>Completed</th>
+                    <th>Description</th>                   
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -58,8 +57,7 @@
             <tfoot>
                 <tr>
                     <th>Title</th>
-                    <th>Description</th>
-                    <th>Completed</th>
+                    <th>Description</th>                    
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -67,8 +65,7 @@
             <tbody>
                 <tr ng-repeat="task in tasks">
                     <td>{{task.title}}</td>
-                    <td>{{task.description}}</td>
-                    <td>{{task.completed}}</td>
+                    <td>{{task.description}}</td>                    
                     <td>
                         <button type="button" class="btn btn-warning" ng-click = "editTask($index)">Edit</button>
                     </td>

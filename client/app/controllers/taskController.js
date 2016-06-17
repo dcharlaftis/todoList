@@ -53,7 +53,7 @@
 
             $scope.deleteTask = function(index) {
                 //console.log("dddddd", index);
-                var ind = index + 1;
+                var ind = $scope.tasks[index].id;
                 var deleteUrl = 'http://localhost:9000/api/tasks/' + ind;
                 $http({
                     method: 'DELETE',
@@ -78,7 +78,7 @@
                 $scope.canEdit = true;
                 $scope.saveData.title = $scope.tasks[index].title;
                 $scope.saveData.description = $scope.tasks[index].description;
-                $scope.pos = index;
+                $scope.pos = $scope.tasks[index].id;
 
             }
 
@@ -87,7 +87,7 @@
                 var transform = function() {
                     return $.param($scope.saveData);
                 }
-                var indx = $scope.pos +1;
+                var indx = $scope.pos;
                 var putUrl = 'http://localhost:9000/api/tasks/' + indx;
 
                 $http.put(putUrl, $scope.saveData, {
