@@ -44,5 +44,7 @@ Simple application for a demo todo list. Server side developed in django rest fr
 2. Test Client: in a browser hit http://localhost:8000
 
 ###NOTE!!
-1. To avoid CORS issues on browser you can install the Allow-origin plugin (for Chrome).
+1. To avoid CORS issues on browser you can install the Allow-origin plugin (for Chrome).   
+   https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en  
+
 2. For production purposes run : $cd client && sh runClient.sh
